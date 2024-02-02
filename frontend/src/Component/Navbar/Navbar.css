@@ -1,0 +1,8 @@
+.nav{
+    padding: 20px;
+    background-color: white;
+    height: 10vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    display: flex;
+    align-items: center;
+}
