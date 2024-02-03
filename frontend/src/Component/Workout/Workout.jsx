@@ -14,7 +14,7 @@ function Workout() {
         const handleData = async () => {
 
             try {
-                const data = await fetch("http://localhost:4000/app/get")
+                const data = await fetch("http://localhost:4800/app/get")
                 const result = await data.json()
                 console.log(result);
                 setResponse(result)
@@ -31,7 +31,7 @@ function Workout() {
     const handleDelete = (id) => {
         console.log(id);
 
-        fetch(`http://localhost:4000/app/deleteExo/${id}`, {
+        fetch(`http://localhost:4800/app/deleteExo/${id}`, {
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json"
@@ -68,12 +68,12 @@ function Workout() {
 
 
 
-                        <div className="cart">
+                        <div className="cart" key={item._id}>
                             <div className="ico">
 
                                 <h2>{item.title}</h2>
 
-                                 <div className="icon" onClick={()=> handleDelete(item._id)}>
+                                 <div className="icon" onClick={()=> handleDelete(item._id)} >
                                     <IoTrashOutline size={30} />
                                 </div>
                             </div>

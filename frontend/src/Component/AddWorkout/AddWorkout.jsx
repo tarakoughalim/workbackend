@@ -4,6 +4,7 @@ import './AddWorkout.css';
 import toast, { Toaster } from 'react-hot-toast';
 
 
+
 function AddWorkout() {
   const [title, setTitle] = useState('');
   const [load, setLoad] = useState('');
