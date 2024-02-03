@@ -13,7 +13,7 @@ const corsOption ={
 
     origin: process.env.FRONTEND_URL,
 }
-app.use(cors(corsOption));
+app.use(cors());
 console.log(process.env.FRONTEND_URL);
 
 
@@ -21,7 +21,7 @@ const dbURI = process.env.DB_URL
 console.log(dbURI)
 mongoose.connect(dbURI)
 .then(() =>{
-    app.listen(4800)
+    app.listen(process.env.PORT || 4800)
     console.log('connected to db');
 })
 .catch((err) => console.log(err));
